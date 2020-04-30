@@ -4,6 +4,9 @@ class CreateStrolls < ActiveRecord::Migration[5.2]
       t.string :place
       t.string :date
 
+      t.belongs_to :dog, index: true
+      t.belongs_to :dogsitter, index: true
+
       t.timestamps
     end
   end
